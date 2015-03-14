@@ -1,25 +1,31 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.resturantMgmt.application</groupId>
-  <artifactId>ResturantMgmtDAO</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>ResturantMgmtDAO</name>
-  <description>ResturantMgmtDAO</description>
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.resturantMgmt.application</groupId>
+	<artifactId>ResturantMgmtDAO</artifactId>
+	<name>ResturantMgmtDAO</name>
+	<description>ResturantMgmtDAO</description>
+	<properties>
 		<org.springframework.version>4.0.3.RELEASE</org.springframework.version>
 	</properties>
-  <dependencies>
-  <dependency>
+	 <parent>
+ 		<artifactId>ResturantMgmtBuild</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../ResturantMgmtBuild</relativePath>
+		<groupId>com.resturantMgmt</groupId>
+	</parent>
+	<dependencies>
+		<dependency>
 			<groupId>com.resturantMgmt.application</groupId>
 			<artifactId>ResturantMgmtPersistence</artifactId>
-			<version>0.0.1-SNAPSHOT</version>			
-  </dependency>
-   <dependency>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>com.resturantMgmt.application</groupId>
 			<artifactId>ResturantMgmtValueObject</artifactId>
-			<version>0.0.1-SNAPSHOT</version>			
-  </dependency>
-  <dependency>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>3.6.3.Final</version>
@@ -109,8 +115,18 @@
 			<artifactId>spring-orm</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
-  </dependencies>
-  <build>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
+				<configuration>
+					<outputDirectory>${outputDir}</outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
 		<finalName>ResturantMgmtDAO</finalName>
-  </build>
+	</build>
 </project>

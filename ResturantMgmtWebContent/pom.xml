@@ -1,13 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.resturantMgmt.application</groupId>
-  <artifactId>ResturantMgmtWebContent</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>ResturantMgmtWebContent</name>
-  <description>ResturantMgmtWebContent</description>
-  <packaging>war</packaging>
-  <url>http://maven.apache.org</url>
-  <repositories>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.resturantMgmt.application</groupId>
+	<artifactId>ResturantMgmtWebContent</artifactId>
+	<name>ResturantMgmtWebContent</name>
+	<description>ResturantMgmtWebContent</description>
+	<packaging>war</packaging>
+	<url>http://maven.apache.org</url>
+	<parent>
+		<artifactId>ResturantMgmtBuild</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../ResturantMgmtBuild</relativePath>
+		<groupId>com.resturantMgmt</groupId>
+	</parent>
+	<repositories>
 		<repository>
 			<id>JBoss repository</id>
 			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
@@ -41,7 +47,7 @@
 			</exclusions>
 			<scope>runtime</scope>
 		</dependency>
-	<!-- Core utilities used by other modules. Define this if you use Spring 
+		<!-- Core utilities used by other modules. Define this if you use Spring 
 			Utility APIs (org.springframework.core.*/org.springframework.util.*) -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -235,15 +241,17 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		</dependencies>
-  <build>
+	</dependencies>
+	<build>
 		<finalName>ResturantMgmt</finalName>
 		<plugins>
 			<plugin>
+
 				<groupId>org.eclipse.m2e</groupId>
 				<artifactId>lifecycle-mapping</artifactId>
 				<version>1.0.0</version>
 				<configuration>
+
 					<lifecycleMappingMetadata>
 						<pluginExecutions>
 							<!-- copy-dependency plugin -->
@@ -284,9 +292,17 @@
 						</goals>
 					</execution>
 				</executions>
+
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<outputDirectory>${outputDir}</outputDirectory>
+				</configuration>
 			</plugin>
 
-
 		</plugins>
-  </build>
+	</build>
 </project>

@@ -1,28 +1,44 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.resturantMgmt.application</groupId>
-  <artifactId>ResturantMgmtCore</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>ResturantMgmtCore</name>
-  <description>ResturantMgmtCore</description>
-  <dependencies>
-  <dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.resturantMgmt.application</groupId>
+	<artifactId>ResturantMgmtCore</artifactId>
+	<name>ResturantMgmtCore</name>
+	<description>ResturantMgmtCore</description>
+	  <parent>
+ 		<artifactId>ResturantMgmtBuild</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../ResturantMgmtBuild</relativePath>
+		<groupId>com.resturantMgmt</groupId>
+	</parent>
+	<dependencies>
+		<dependency>
 			<groupId>com.resturantMgmt.application</groupId>
 			<artifactId>ResturantMgmtPersistence</artifactId>
-			<version>0.0.1-SNAPSHOT</version>			
-  </dependency>
-   <dependency>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>com.resturantMgmt.application</groupId>
 			<artifactId>ResturantMgmtValueObject</artifactId>
-			<version>0.0.1-SNAPSHOT</version>			
-  </dependency>
-  <dependency>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>com.resturantMgmt.application</groupId>
 			<artifactId>ResturantMgmtCommon</artifactId>
-			<version>0.0.1-SNAPSHOT</version>			
-  </dependency>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
-		<build>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
+				<configuration>
+					<outputDirectory>${outputDir}</outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
 		<finalName>ResturantMgmtCore</finalName>
-		</build>
+	</build>
 </project>

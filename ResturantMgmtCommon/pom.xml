@@ -2,12 +2,17 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.resturantMgmt.application</groupId>
   <artifactId>ResturantMgmtCommon</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>ResturantMgmtCommon</name>
   <description>ResturantMgmtCommon</description>
   <properties>
 		<org.springframework.version>4.0.3.RELEASE</org.springframework.version>
  </properties>
+  <parent>
+ 		<artifactId>ResturantMgmtBuild</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../ResturantMgmtBuild</relativePath>
+		<groupId>com.resturantMgmt</groupId>
+	</parent>
  <dependencies>
   <dependency>
 			<groupId>com.resturantMgmt.application</groupId>
@@ -100,6 +105,16 @@
 		</dependency>
 		</dependencies>
   <build>
+        <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
+				<configuration>
+					<outputDirectory>D:/ECLIPSEWORKSPACE/ResturantMgmtApplication</outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
 		<finalName>ResturantMgmtCommon</finalName>
   </build>
 </project>

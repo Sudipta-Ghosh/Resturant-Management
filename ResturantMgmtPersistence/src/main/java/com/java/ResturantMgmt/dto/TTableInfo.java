@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 import com.java.ResturantMgmt.dto.util.GenericDTO;
 @Entity
-@Table(name = "T_TABLE_INFO", schema = "LOCALUSER")
+@Table(name = "T_TABLE_INFO", schema = "hotelUser")
 public class TTableInfo extends GenericDTO implements java.io.Serializable {
 	
 	  @Id
