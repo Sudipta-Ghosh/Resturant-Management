@@ -15,7 +15,7 @@ public class Menu {
 	   selectedOption = OPT1;
    }
 
-   public int getSelectedOption() {
+   public int getSelectedOption(){
       return selectedOption;
    }
 
