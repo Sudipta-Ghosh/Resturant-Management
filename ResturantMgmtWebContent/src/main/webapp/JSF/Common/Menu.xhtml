@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions" >
+ 
+<h:head>
+ <style type="text/css">
+
+ .ui-layout-north {
+        z-index:20 !important;
+        overflow:visible !important;
+    }
+
+    .ui-layout-north .ui-layout-unit-content {
+        overflow:visible !important;
+    }
+    
+        </style>
+</h:head>
+<h:body>
+	<h1>Hello World PrimeFaces</h1>
+ 
+	<h:form>
+    <pe:layout resizerTip="Resize Me" togglerTipClosed="Open Me" togglerTipOpen="Close Me">
+        <pe:layoutPane position="north" size="80" closable="false" style="min-width:400px;min-height:200px;">
+            
+	           <ui:include src="HorizentalMainMenu.xhtml" />
+    	  
+        </pe:layoutPane>
+        <pe:layoutPane position="center">
+           
+                <f:facet name="header">
+                    <h:outputText value="Center-North"/>
+                    </f:facet>
+                   <p:panel id="optionPanel">
+		                   <p:panel id="opt1Panel" rendered="#{menu.selectedMenu == menu.OPT1}">
+		                       <p:outputLabel value="This is the content option 1 (default)." />
+		                   </p:panel>
+		   
+		                   <p:panel id="opt2Panel"
+		                       rendered="#{menu.selectedMenu == menu.OPT2}">
+		                       <p:outputLabel value="This is the content option 2 (default)." />
+		                   </p:panel>
+            </p:panel>
+                
+          
+           
+        </pe:layoutPane>
+        <pe:layoutPane position="west" size="200">
+            <pe:layoutPane position="north" size="33%">
+                West-North
+            </pe:layoutPane>
+            <pe:layoutPane position="center" minHeight="60">
+                West-Center
+            </pe:layoutPane>
+            <pe:layoutPane position="south" size="33%" initClosed="true">
+                West-South
+            </pe:layoutPane>
+        </pe:layoutPane>
+        <pe:layoutPane position="east" size="200" resizeWhileDragging="true">
+            East
+        </pe:layoutPane>
+        <pe:layoutPane position="south" size="80">
+            South
+        </pe:layoutPane>
+    </pe:layout>
+</h:form>
+
+<h:outputStylesheet library="css" name="global.css"/>
+   
+<h:outputStylesheet id="layoutCSS">
+    body {
+        margin: 4px !important;
+    }
+</h:outputStylesheet>
+            
+ 
+</h:body>
+</html>

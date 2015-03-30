@@ -23,6 +23,103 @@
 		<org.springframework.version>4.0.3.RELEASE</org.springframework.version>
 	</properties>
 	<dependencies>
+	  <dependency>
+			<groupId>com.resturantMgmt.application</groupId>
+			<artifactId>ResturantMgmtPersistence</artifactId>
+			<version>0.0.1-SNAPSHOT</version>			
+  </dependency>
+   <dependency>
+			<groupId>com.resturantMgmt.application</groupId>
+			<artifactId>ResturantMgmtValueObject</artifactId>
+			<version>0.0.1-SNAPSHOT</version>			
+  </dependency>
+   <dependency>
+			<groupId>com.resturantMgmt.application</groupId>
+			<artifactId>ResturantMgmtCommon</artifactId>
+			<version>0.0.1-SNAPSHOT</version>			
+  </dependency>
+  <dependency>
+			<groupId>com.resturantMgmt.application</groupId>
+			<artifactId>ResturantMgmtService</artifactId>
+			<version>0.0.1-SNAPSHOT</version>			
+  </dependency>
+   <dependency>
+			<groupId>com.resturantMgmt.application</groupId>
+			<artifactId>ResturantMgmtCore</artifactId>
+			<version>0.0.1-SNAPSHOT</version>			
+  </dependency>
+  <dependency>
+			<groupId>com.resturantMgmt.application</groupId>
+			<artifactId>ResturantMgmtDAO</artifactId>
+			<version>0.0.1-SNAPSHOT</version>			
+  </dependency>
+  <dependency>
+			<groupId>com.resturantMgmt.application</groupId>
+			<artifactId>ResturantMgmtWeb</artifactId>
+			<version>0.0.1-SNAPSHOT</version>			
+  </dependency>
+  <dependency>
+	<groupId>org.primefaces.extensions</groupId>
+	<artifactId>primefaces-extensions</artifactId>
+	<version>3.0.0</version>
+</dependency>
+  <dependency>
+	<groupId>org.primefaces</groupId>
+	<artifactId>primefaces</artifactId>
+	<version>5.0</version>
+</dependency>
+<!-- JSF 2 -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.1.11</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.1.11</version>
+		</dependency>
+ 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+ 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+ 
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+		</dependency>
+ 
+		<!-- EL -->
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>el-impl</artifactId>
+			<version>2.2</version>
+		</dependency>
+		
+		<dependency>
+	<groupId>org.primefaces.extensions</groupId>
+	<artifactId>all-themes</artifactId>
+	<version>1.0.8</version>
+</dependency>
+
+ 
+		<!-- Tomcat 6 need this 
+		<dependency>
+			<groupId>com.sun.el</groupId>
+			<artifactId>el-ri</artifactId>
+			<version>1.0</version>
+		</dependency>
+		-->
+  
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
